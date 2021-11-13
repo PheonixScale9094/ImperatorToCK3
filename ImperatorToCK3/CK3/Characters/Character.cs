@@ -30,6 +30,7 @@ namespace ImperatorToCK3.CK3.Characters {
 		}
 		public Date BirthDate { get; private set; } = new Date(1, 1, 1);
 		public Date? DeathDate { get; private set; }
+		public CharacterAttributes? Attributes { get; private set; }
 		public string? DeathReason { get; private set; }
 
 		public SortedSet<string> Traits { get; } = new();
@@ -203,6 +204,8 @@ namespace ImperatorToCK3.CK3.Characters {
 			if (impDeathReason is not null) {
 				DeathReason = deathReasonMapper.GetCK3ReasonForImperatorReason(impDeathReason);
 			}
+
+			Attributes = new CharacterAttributes(impCharacter.Attributes);
 		}
 
 		public void BreakAllLinks() {

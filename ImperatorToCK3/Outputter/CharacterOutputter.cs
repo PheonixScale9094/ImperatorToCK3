@@ -25,6 +25,16 @@ namespace ImperatorToCK3.Outputter {
 				output.WriteLine($"\tdynasty = {character.DynastyId}");
 			}
 
+			// output Attributes
+			if (character.Attributes is not null) {
+				output.WriteLine($"\tmartial  = {character.Attributes.Martial}");
+				output.WriteLine($"\tprowess  = {character.Attributes.Prowess}");
+				output.WriteLine($"\tdiplomacy  = {character.Attributes.Diplomacy}");
+				output.WriteLine($"\tintrigue  = {character.Attributes.Intrigue}");
+				output.WriteLine($"\tstewardship  = {character.Attributes.Stewardship}");
+				output.WriteLine($"\tlearning  = {character.Attributes.Learning}");
+			}
+
 			//output father and mother
 			if (character.Father is not null) {
 				output.WriteLine($"\tfather = {character.Father.Id}");
