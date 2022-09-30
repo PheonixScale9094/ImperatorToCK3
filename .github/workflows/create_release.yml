@@ -40,7 +40,7 @@ jobs:
         fetch-depth: 0
         submodules: recursive
     - name: Setup Dotnet for use with actions
-      uses: actions/setup-dotnet@v2
+      uses: actions/setup-dotnet@v3.0.0
       with:
         dotnet-version: '6.*'
     - name: "Add version to version.txt"
@@ -88,7 +88,7 @@ jobs:
         fetch-depth: 0
         submodules: recursive
     - name: Setup Dotnet for use with actions
-      uses: actions/setup-dotnet@v2
+      uses: actions/setup-dotnet@v3.0.0
       with:
         dotnet-version: '6.*'
     - name: "Add version to version.txt"
@@ -138,7 +138,7 @@ jobs:
         fetch-depth: 0
         submodules: recursive
     - name: Setup Dotnet for use with actions
-      uses: actions/setup-dotnet@v2
+      uses: actions/setup-dotnet@v3.0.0
       with:
         dotnet-version: '6.*'
     - name: "Add version to version.txt"
